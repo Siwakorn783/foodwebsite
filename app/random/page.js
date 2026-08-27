@@ -7,11 +7,24 @@ export const metadata = {
 };
 
 export default async function RandomPage() {
-  const res = await fetch(
-    "https://www.themealdb.com/api/json/v1/1/random.php"
+  const filterRes = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/filter.php?a=Thai"
   );
-  const data = await res.json();
-  const meal = data.meals?.[0];
+  const filterData = await filterRes.json();
+  const thaiMeals = filterData.meals;
+
+  if (!thaiMeals || thaiMeals.length === 0) {
+    notFound();
+  }
+
+  const randomIndex = Math.floor(Math.random() * thaiMeals.length);
+  const randomId = thaiMeals[randomIndex].idMeal;
+
+  const detailRes = await fetch(
+    `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${randomId}`
+  );
+  const detailData = await detailRes.json();
+  const meal = detailData.meals?.[0];
 
   if (!meal) {
     notFound();

@@ -40,12 +40,6 @@ export default function RootLayout({ children }) {
                 หน้าแรก
               </Link>
               <Link
-                href="/categories"
-                className="hover:text-accent-light transition-colors"
-              >
-                หมวดหมู่
-              </Link>
-              <Link
                 href="/random"
                 className="hover:text-accent-light transition-colors"
               >
