@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
             <Link href="/" className="flex items-center gap-2 group">
               <span className="text-2xl">🍜</span>
               <span className="text-xl font-bold tracking-tight group-hover:opacity-90 transition-opacity">
-                Thai Kitchen
+                Food Website
               </span>
             </Link>
             <div className="flex items-center gap-6 text-sm font-medium">
@@ -49,19 +49,7 @@ export default function RootLayout({ children }) {
           </div>
         </nav>
         <main className="flex-1">{children}</main>
-        <footer className="bg-stone-800 text-stone-300 text-center py-6 text-sm">
-          <p>
-            &copy; 2026 Thai Kitchen &mdash; ข้อมูลจาก{" "}
-            <a
-              href="https://www.themealdb.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-white transition-colors"
-            >
-              TheMealDB
-            </a>
-          </p>
-        </footer>
+
       </body>
     </html>
   );
