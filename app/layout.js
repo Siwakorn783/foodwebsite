@@ -12,11 +12,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Thai Kitchen - เมนูอาหารไทย",
-  description: "เว็บแอปพลิเคชันสำหรับดูเมนูอาหารไทย วิธีทำ และวัตถุดิบ",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html
@@ -27,7 +22,7 @@ export default function RootLayout({ children }) {
         <nav className="bg-primary text-white shadow-lg sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2 group">
-              <span className="text-2xl">🍜</span>
+              <span className="text-3xl">🍜</span>
               <span className="text-xl font-bold tracking-tight group-hover:opacity-90 transition-opacity">
                 Food Website
               </span>
